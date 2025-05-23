@@ -1,0 +1,429 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - Academia Ballet Folclorico Del Bravo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rojo-mexicano: #9E1B20;
+            --azul-mexicano: #1A3E72;
+            --verde-mexicano: #2E5C3D;
+            --amarillo-mexicano: #D9A441;
+            --naranja-mexicano: #C45C1A;
+            --blanco: #ffffff;
+            --gris-oscuro: #333333;
+            --beige: #F5E8C9;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--beige);
+            color: var(--gris-oscuro);
+            line-height: 1.6;
+            background-image: url('https://www.transparenttextures.com/patterns/mexican.png');
+            padding-bottom: 100px;
+        }
+
+        header {
+            background-color: var(--rojo-mexicano);
+            color: var(--blanco);
+            padding: 1.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border-bottom: 5px solid var(--amarillo-mexicano);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+            color: var(--blanco);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            margin-top: 1rem;
+            background-color: var(--azul-mexicano);
+            padding: 0.8rem;
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a {
+            margin: 0 1.2rem;
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            background-color: var(--amarillo-mexicano);
+            color: var(--rojo-mexicano);
+            transform: translateY(-2px);
+        }
+
+        hr {
+            border: 0;
+            height: 5px;
+            background: repeating-linear-gradient(
+                to right,
+                var(--rojo-mexicano),
+                var(--rojo-mexicano) 20px,
+                var(--azul-mexicano) 20px,
+                var(--azul-mexicano) 40px,
+                var(--verde-mexicano) 40px,
+                var(--verde-mexicano) 60px,
+                var(--amarillo-mexicano) 60px,
+                var(--amarillo-mexicano) 80px
+            );
+            margin: 2rem 0;
+        }
+
+        .marquesina-container {
+            width: 100%;
+            overflow: hidden;
+            background-color: var(--amarillo-mexicano);
+            border-top: 3px solid var(--rojo-mexicano);
+            border-bottom: 3px solid var(--rojo-mexicano);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: 20px 0;
+        }
+
+        .marquesina {
+            display: inline-block;
+            white-space: nowrap;
+            padding: 12px 0;
+            color: var(--rojo-mexicano);
+            font-weight: bold;
+            font-size: 1.2rem;
+            animation: desplazar 25s linear infinite;
+        }
+
+        @keyframes desplazar {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .marquesina span {
+            margin: 0 40px;
+            position: relative;
+        }
+
+        .marquesina span::before {
+            content: "•";
+            color: var(--azul-mexicano);
+            margin-right: 15px;
+            font-size: 1.5rem;
+            vertical-align: middle;
+        }
+
+        main {
+	padding: 2rem;
+	margin: 2rem auto;
+	max-width: 800px;
+	background-color: var(--blanco);
+	border-radius: 8px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	border: 3px solid var(--rojo-mexicano);
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+        }
+
+        main::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: repeating-linear-gradient(
+                to right,
+                var(--rojo-mexicano),
+                var(--azul-mexicano),
+                var(--verde-mexicano),
+                var(--amarillo-mexicano)
+            );
+        }
+
+        .contact-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            color: var(--azul-mexicano);
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-form {
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--azul-mexicano);
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid var(--amarillo-mexicano);
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--beige);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .btn-submit {
+            background-color: var(--rojo-mexicano);
+            color: var(--blanco);
+            border: none;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--naranja-mexicano);
+            transform: translateY(-2px);
+        }
+
+        .contact-info {
+            padding: 20px;
+            background-color: var(--beige);
+            border-radius: 8px;
+            border: 2px dashed var(--azul-mexicano);
+        }
+
+        .contact-info h3 {
+            color: var(--rojo-mexicano);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .info-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .info-item i {
+            color: var(--azul-mexicano);
+            margin-right: 10px;
+            font-size: 1.2rem;
+            width: 25px;
+            text-align: center;
+        }
+
+        .info-item p {
+            margin: 0;
+        }
+
+        .map-container {
+            margin-top: 20px;
+            border: 3px solid var(--amarillo-mexicano);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        footer {
+            background-color: var(--azul-mexicano);
+            color: var(--blanco);
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            border-top: 5px solid var(--amarillo-mexicano);
+        }
+
+        .logo-container {
+            background-color: var(--blanco);
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 15px auto;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid var(--amarillo-mexicano);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-container::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 2px dashed var(--rojo-mexicano);
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+
+        .logo-container img {
+            width: 80%;
+            height: auto;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            nav a {
+                margin: 0 0.5rem;
+                font-size: 0.9rem;
+                padding: 0.4rem 0.8rem;
+            }
+            .contact-title {
+                font-size: 1.5rem;
+            }
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            .marquesina {
+                font-size: 1rem;
+                padding: 8px 0;
+                animation: desplazar-mobile 20s linear infinite;
+            }
+            .marquesina span {
+                margin: 0 20px;
+            }
+            @keyframes desplazar-mobile {
+                0% { transform: translateX(100%); }
+                100% { transform: translateX(-150%); }
+            }
+        }
+.tabla-con-borde {
+  position: relative;
+  margin: 2rem 0;
+  padding: 10px; /* Grosor del borde */
+  background: repeating-linear-gradient(
+    to right,
+    var(--rojo-mexicano),
+    var(--rojo-mexicano) 20px,
+    var(--azul-mexicano) 20px,
+    var(--azul-mexicano) 40px,
+    var(--verde-mexicano) 40px,
+    var(--verde-mexicano) 60px,
+    var(--amarillo-mexicano) 60px,
+    var(--amarillo-mexicano) 80px
+  );
+}
+
+/* La tabla interna (sin bordes externos) */
+.tabla-con-borde table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white; /* Fondo para que no se vea el gradiente detrás */
+}
+
+/* Estilo de celdas (opcional) */
+.tabla-con-borde th, .tabla-con-borde td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+		
+		
+    </style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+	
+	<header>
+        <div class="logo-container">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuAXVyaSQf8tvYA9Cu_Rvw9zNujffAZweMOw&s" alt="Logo Academia">
+      </div>
+        <h1>Academia Ballet Folclorico Del Bravo</h1>
+        <nav> 
+            <a href="index.html">Inicio</a>
+            <a href="Clase.html">Clases</a>
+            <a href="galeria.html">Galería</a>
+            <a href="contacto.html" class="active">Contacto</a>
+        </nav>
+</header>
+
+    <div class="marquesina-container">
+        <div class="marquesina">
+            <span>¡Contáctanos para más información!</span>
+            <span>Horario de atención: Lunes a Viernes de 9am a 6pm</span>
+            <span>Clases para todas las edades</span>
+            <span>Talleres especiales los fines de semana</span>
+            <span>¡Agenda una clase muestra gratuita!</span>
+            
+            <span>¡Contáctanos para más información!</span>
+            <span>Horario de atención: Lunes a Viernes de 9am a 6pm</span>
+            <span>Clases para todas las edades</span>
+            <span>Talleres especiales los fines de semana</span>
+            <span>¡Agenda una clase muestra gratuita!</span>
+        </div>
+    </div>
+	<main> 
+		<div class = "tabla-con-borde"> 
+		<table  width="801" height="285" border="1">
+	  <tbody>
+	    <tr>
+	      <td>Lunes</td>
+	      <td>Martes</td>
+	      <td>Miercoles</td>
+	      <td>Jueves</td>
+	      <td>Viernes</td>
+	      <td>Sabado</td>
+	      <td>Domingo</td>
+        </tr>
+	    <tr>
+	      <td>19:40-21:20</td>
+	      <td>19:40-21:20</td>
+	      <td>19:40-21:20</td>
+	      <td>X</td>
+	      <td>X</td>
+	      <td>8:00-13:00</td>
+	      <td>10:00-14:00</td>
+        </tr>
+	   
+      </tbody>
+</table></div>
+	</main>
+</body>
+</html>
